@@ -84,7 +84,7 @@ def try_recover_near_r(r1: int, r2: int, s1: int, s2: int, z1: int, z2: int,
 # Przykład użycia:
 if __name__ == "__main__":
     # Wstaw swoje wartości (możesz użyć int('hexstring', 16) jeśli masz hex)
-    r1 = 0xced8474e7cbb2c9ade8b4a6474c3fa8ea4036718d844f3105dde155a6583a134   # zamień
+    r1 = 0xc8794d083ad9139c0437435778345b4f7261972ac4d81d8d3ae24c32f61b659c   # zamień
     r2 = 0xceda0e7cfe7e6da20b3e1b08877e722eceba96574f50b78c8b03618e4c6ce18c
     s1 = 0x1c9e070de661d5913d457c6f075641ec28c8c8f4fe336070710787e471ebd558
     s2 = 0x034a6987bc4e6cfac6a8a5ed767ccbbf47cfb15323b3ebb44f3e72ee6148e255

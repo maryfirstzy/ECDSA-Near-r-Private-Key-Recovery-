@@ -12,7 +12,7 @@ def mod_inv(a: int, n: int) -> int:
         raise ValueError(f"Brak odwrotności modulo n dla a = {a} (mod {n}).")
 
 def try_recover_near_r(r1: int, r2: int, s1: int, s2: int, z1: int, z2: int,
-                       n: int, max_delta: int = 2**20, verbose: bool = False):
+                       n: int, max_delta: int = 2**255, verbose: bool = False):
     """
     Próbuj odzyskać k1, k2 i d gdy k2 = k1 + t i |t| <= max_delta.
     Zwraca listę wszystkich znalezionych rozwiązań w postaci krotek (k1, k2, d, t).

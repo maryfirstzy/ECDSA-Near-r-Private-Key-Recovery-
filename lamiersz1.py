@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # recover_near_r.py
 # Zakłada: r1,r2,s1,s2,z1,z2,n są liczbami całkowitymi (int)
-# Działa gdy k2 = k1 + t dla niewielkiego całkowitego t (np. |t| <= 2^20 zależnie od zasobów).
+# Działa gdy k2 = k1 + t dla niewielkiego całkowitego t (np. |t| <= 2^256 zależnie od zasobów).
 
 def mod_inv(a: int, n: int) -> int:
     """Odwrotność a modulo n. Rzuca ValueError jeśli brak odwrotności."""
@@ -12,7 +12,7 @@ def mod_inv(a: int, n: int) -> int:
         raise ValueError(f"Brak odwrotności modulo n dla a = {a} (mod {n}).")
 
 def try_recover_near_r(r1: int, r2: int, s1: int, s2: int, z1: int, z2: int,
-                       n: int, max_delta: int = 2**255, verbose: bool = False):
+                       n: int, max_delta: int = 2**256, verbose: bool = False):
     """
     Próbuj odzyskać k1, k2 i d gdy k2 = k1 + t i |t| <= max_delta.
     Zwraca listę wszystkich znalezionych rozwiązań w postaci krotek (k1, k2, d, t).
@@ -94,8 +94,8 @@ if __name__ == "__main__":
     # rząd krzywej secp256k1:
     n = 0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEBAAEDCE6AF48A03BBFD25E8CD0364141
 
-    # spróbuj z małym przeszukaniem, np. max_delta = 2**16 (65536) -> koszt 131k iteracji (oba kierunki)
-    solutions = try_recover_near_r(r1, r2, s1, s2, z1, z2, n, max_delta=2**16, verbose=True)
+    # spróbuj z małym przeszukaniem, np. max_delta = 2**256 (115792089237316195423570985008687907852837564279074904382605163141518161494337) -> koszt 131k iteracji (oba kierunki)
+    solutions = try_recover_near_r(r1, r2, s1, s2, z1, z2, n, max_delta=2**256, verbose=True)
 
     print(f"Znaleziono {len(solutions)} rozwiązań.")
     for k1, k2, d, t in solutions:

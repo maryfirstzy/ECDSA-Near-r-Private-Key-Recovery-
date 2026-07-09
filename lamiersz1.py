@@ -84,12 +84,12 @@ def try_recover_near_r(r1: int, r2: int, s1: int, s2: int, z1: int, z2: int,
 # Przykład użycia:
 if __name__ == "__main__":
     # Wstaw swoje wartości (możesz użyć int('hexstring', 16) jeśli masz hex)
-    r1 = 0xced8474e7cbb2c9ade8b4a6474c3fa8ea4036718d844f3105dde155a6583a134       # zamień
-    r2 = 0xceda0e7cfe7e6da20b3e1b08877e722eceba96574f50b78c8b03618e4c6ce18c
-    s1 = 0x1c9e070de661d5913d457c6f075641ec28c8c8f4fe336070710787e471ebd558
-    s2 = 0x034a6987bc4e6cfac6a8a5ed767ccbbf47cfb15323b3ebb44f3e72ee6148e255
-    z1 = 0x0cf7190cc6c1f95b987e0e284e4eba44552f89662272b850b059a8dc0d8905a8
-    z2 = 0xe204e6d82b618ec35cbb3d0c902d76a00d4afa6cfbb37e797309a73a0b5ddb55 
+    r1 = 0xbaf2aa695873ee637a1b23b53a78c512e4ea8ed72738badbdac3fe6b2a769176       # zamień
+    r2 = 0xd56a07721d620e6b3c64021713ae2cec9bc831c4d6d32501e347142bff70d078
+    s1 = 0xb47bbe4d2e405452dfa95bbd6ac3804c38c25f838edafd5ceb3456f3b040b0a6
+    s2 = 0x4c136bac45a92b2adfc0af27282b494f6dc416535433d36e04057de2bf7cc326
+    z1 = 0xd20aff079cd86074eff889e1f4f0fbd0b97ef4eeff378147afc815d8a28552d5
+    z2 = 0x17ea532a30334538c281467befb5fca7e66c6b1e760f5d17d77cb853c65a3c7d 
 
     # rząd krzywej secp256k1:
     n = 0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEBAAEDCE6AF48A03BBFD25E8CD0364141

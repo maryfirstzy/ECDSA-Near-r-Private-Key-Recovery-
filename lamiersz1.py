@@ -94,8 +94,8 @@ if __name__ == "__main__":
     # rząd krzywej secp256k1:
     n = 0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEBAAEDCE6AF48A03BBFD25E8CD0364141
 
-    # spróbuj z małym przeszukaniem, np. max_delta = 2**256 (115792089237316195423570985008687907852837564279074904382605163141518161494337) -> koszt 131k iteracji (oba kierunki)
-    solutions = try_recover_near_r(r1, r2, s1, s2, z1, z2, n, max_delta=2**256, verbose=True)
+    # spróbuj z małym przeszukaniem, np. max_delta = 2**16 (65536) -> koszt 131k iteracji (oba kierunki)
+    solutions = try_recover_near_r(r1, r2, s1, s2, z1, z2, n, max_delta=2**16, verbose=True)
 
     print(f"Znaleziono {len(solutions)} rozwiązań.")
     for k1, k2, d, t in solutions:
